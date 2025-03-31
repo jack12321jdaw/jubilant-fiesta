@@ -5,90 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malvern Chinese Culture Appreciation</title>
     <style>
+        /* General Styling */
         body {
-            background-color: #faf3e0;
-            font-family: "SimSun", serif;
-            color: #4b1b1b;
+            background: linear-gradient(135deg, #f5d0a9, #f3e1d1);
+            font-family: 'Roboto', sans-serif;
+            color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #8b0000;
+            background: #e63946;
             color: white;
-            padding: 30px 0;
-            font-size: 28px;
+            padding: 40px 0;
+            font-size: 32px;
+            text-align: center;
+            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            letter-spacing: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         nav {
-            background-color: #f4cccc;
-            padding: 15px 0;
+            background: #f1faee;
+            padding: 20px;
             display: flex;
             justify-content: center;
+            border-bottom: 2px solid #e63946;
         }
         nav a {
             text-decoration: none;
-            color: #8b0000;
-            margin: 0 20px;
+            color: #e63946;
+            margin: 0 25px;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 500;
             text-transform: uppercase;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            padding: 12px 15px;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
-            background-color: #8b0000;
+            background-color: #e63946;
             color: white;
         }
         section {
-            padding: 40px 20px;
+            padding: 50px 30px;
             text-align: center;
         }
         .container {
-            max-width: 900px;
-            margin: auto;
-            background-color: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
+            transition: box-shadow 0.3s ease;
+        }
+        .container:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
         h2 {
-            color: #8b0000;
-            font-size: 32px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        footer {
-            background-color: #8b0000;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            font-size: 16px;
-            margin-top: 30px;
-        }
-        footer a {
-            color: #f0e68c;
-            text-decoration: none;
+            color: #e63946;
+            font-size: 36px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
             font-weight: bold;
         }
+        footer {
+            background: #e63946;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            font-size: 18px;
+        }
+        footer a {
+            color: #f1faee;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
         footer a:hover {
-            text-decoration: underline;
+            color: #a8dadc;
         }
         .btn {
-            background-color: #8b0000;
+            background: #e63946;
             color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 30px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
         }
         .btn:hover {
-            background-color: #600000;
+            background-color: #a8dadc;
+            transform: translateY(-3px);
         }
         .language-selector {
             display: flex;
@@ -96,17 +104,19 @@
             margin-top: 20px;
         }
         .language-selector button {
-            background-color: #8b0000;
+            background: #e63946;
             color: white;
-            padding: 10px 20px;
-            margin: 0 10px;
+            padding: 12px 20px;
+            margin: 0 15px;
             border: none;
-            font-size: 16px;
-            border-radius: 5px;
+            font-size: 18px;
+            border-radius: 25px;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .language-selector button:hover {
-            background-color: #600000;
+            background: #a8dadc;
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -131,7 +141,7 @@
     </nav>
     <section id="about" class="container">
         <h2 id="about-title">About Us</h2>
-        <p id="about-text">We are the first student-led CCA at Malvern School. Every Wednesday from 3:00 PM to 4:20 PM, we gather to organize and participate in cultural activities to share the charm of Chinese culture.</p>
+        <p id="about-text">We are the first student-led CCA at Malvern School. Every Wednesday from 3:20 PM to 4:30 PM, we gather to organize and participate in cultural activities to share the charm of Chinese culture.</p>
         <p id="about-desc">We encourage all students interested in Chinese culture to join our club, regardless of nationality. Everyone is welcome to participate!</p>
     </section>
     <section id="schedule" class="container">

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malerven 学生领导的 CCA</title>
+    <title>Malerven Student-Led CCA</title>
     <style>
         body {
             background-color: #faf3e0;
@@ -90,42 +90,164 @@
         .btn:hover {
             background-color: #600000;
         }
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .language-selector button {
+            background-color: #8b0000;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .language-selector button:hover {
+            background-color: #600000;
+        }
     </style>
 </head>
 <body>
-    <header>
-        Malerven 学生领导的 CCA
+    <!-- Language Selection -->
+    <div class="language-selector">
+        <button onclick="setLanguage('zh')">中文</button>
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('es')">Español</button>
+    </div>
+
+    <!-- Page Content -->
+    <header id="header">
+        Malerven Student-Led CCA
     </header>
-    <nav>
-        <a href="#about">关于我们</a>
-        <a href="#schedule">活动时间</a>
-        <a href="#members">我们的成员</a>
-        <a href="#contact">联系我们</a>
+    <nav id="nav">
+        <a href="#about" id="about-link">About Us</a>
+        <a href="#schedule" id="schedule-link">Activity Schedule</a>
+        <a href="#members" id="members-link">Our Members</a>
+        <a href="#contact" id="contact-link">Contact Us</a>
     </nav>
     <section id="about" class="container">
-        <h2>关于我们</h2>
-        <p>我们是 Malerven 学校的第一个学生领导的 CCA（课外活动社团）。每周三下午三点到四点二十，我们将聚集在一起，组织和参与各种文化活动，分享中华文化的魅力。</p>
-        <p>我们鼓励每个对中国文化感兴趣的学生加入我们的社团，不论国籍，欢迎大家一起参与！</p>
+        <h2 id="about-title">About Us</h2>
+        <p id="about-text">We are the first student-led CCA at Malerven School. Every Wednesday from 3:00 PM to 4:20 PM, we gather to organize and participate in cultural activities to share the charm of Chinese culture.</p>
+        <p id="about-desc">We encourage all students interested in Chinese culture to join our club, regardless of nationality. Everyone is welcome to participate!</p>
     </section>
     <section id="schedule" class="container">
-        <h2>活动时间</h2>
-        <p>我们每周三下午三点到四点二十举办活动。欢迎所有对中华文化感兴趣的同学参加。</p>
+        <h2 id="schedule-title">Activity Schedule</h2>
+        <p id="schedule-text">We hold activities every Wednesday from 3:00 PM to 4:20 PM. All students interested in Chinese culture are welcome to attend.</p>
     </section>
     <section id="members" class="container">
-        <h2>我们的成员</h2>
-        <p>目前，我们的社团有 10 名成员。我们有来自不同国家的同学一起组成这个多元化的团队。</p>
-        <h3>中国领导者：陈梓洋</h3>
-        <p>陈梓洋同学是我们社团的中国领导者，负责组织和引领社团的各项活动，帮助大家更好地理解和体验中华文化。</p>
-        <h3>日本代表：Ryuga</h3>
-        <p>Ryuga 是我们社团的日本代表，他负责沟通和联络日本同学，并帮助我们桥接中日文化的差异与联系。</p>
+        <h2 id="members-title">Our Members</h2>
+        <p id="members-text">Currently, our club has 10 members, a diverse team made up of students from different countries.</p>
+        <h3 id="leader-title">Chinese Leader: Chen Ziyang</h3>
+        <p id="leader-desc">Chen Ziyang is our Chinese leader, responsible for organizing and leading the club's activities, helping everyone better understand and experience Chinese culture.</p>
+        <h3 id="rep-title">Japanese Representative: Ryuga</h3>
+        <p id="rep-desc">Ryuga is our Japanese representative, responsible for communicating and liaising with Japanese students, helping bridge the cultural differences and connections between China and Japan.</p>
     </section>
     <section id="contact" class="container">
-        <h2>联系我们</h2>
-        <p>如果你对我们的社团感兴趣，或者有任何问题，欢迎通过以下邮箱联系我们：</p>
-        <p>Email: <a href="mailto:zc291045@gmail.com">zc291045@gmail.com</a></p>
+        <h2 id="contact-title">Contact Us</h2>
+        <p id="contact-text">If you're interested in our club or have any questions, feel free to contact us at the following email:</p>
+        <p>Email: <a href="mailto:zc291045@gmail.com" id="contact-email">zc291045@gmail.com</a></p>
     </section>
     <footer>
-        版权所有 &copy; 2025 Malerven 学生领导的 CCA | <a href="mailto:zc291045@gmail.com">联系我们</a>
+        Copyright &copy; 2025 Malerven Student-Led CCA | <a href="mailto:zc291045@gmail.com">Contact Us</a>
     </footer>
+
+    <script>
+        function setLanguage(language) {
+            const translations = {
+                zh: {
+                    header: "Malerven 学生领导的 CCA",
+                    aboutLink: "关于我们",
+                    scheduleLink: "活动时间",
+                    membersLink: "我们的成员",
+                    contactLink: "联系我们",
+                    aboutTitle: "关于我们",
+                    aboutText: "我们是 Malerven 学校的第一个学生领导的 CCA（课外活动社团）。每周三下午三点到四点二十，我们将聚集在一起，组织和参与各种文化活动，分享中华文化的魅力。",
+                    aboutDesc: "我们鼓励每个对中国文化感兴趣的学生加入我们的社团，不论国籍，欢迎大家一起参与！",
+                    scheduleTitle: "活动时间",
+                    scheduleText: "我们每周三下午三点到四点二十举办活动。欢迎所有对中华文化感兴趣的同学参加。",
+                    membersTitle: "我们的成员",
+                    membersText: "目前，我们的社团有 10 名成员。我们有来自不同国家的同学一起组成这个多元化的团队。",
+                    leaderTitle: "中国领导者：陈梓洋",
+                    leaderDesc: "陈梓洋同学是我们社团的中国领导者，负责组织和引领社团的各项活动，帮助大家更好地理解和体验中华文化。",
+                    repTitle: "日本代表：Ryuga",
+                    repDesc: "Ryuga 是我们社团的日本代表，他负责沟通和联络日本同学，并帮助我们桥接中日文化的差异与联系。",
+                    contactTitle: "联系我们",
+                    contactText: "如果你对我们的社团感兴趣，或者有任何问题，欢迎通过以下邮箱联系我们：",
+                    contactEmail: "zc291045@gmail.com"
+                },
+                en: {
+                    header: "Malerven Student-Led CCA",
+                    aboutLink: "About Us",
+                    scheduleLink: "Activity Schedule",
+                    membersLink: "Our Members",
+                    contactLink: "Contact Us",
+                    aboutTitle: "About Us",
+                    aboutText: "We are the first student-led CCA at Malerven School. Every Wednesday from 3:00 PM to 4:20 PM, we gather to organize and participate in cultural activities to share the charm of Chinese culture.",
+                    aboutDesc: "We encourage all students interested in Chinese culture to join our club, regardless of nationality. Everyone is welcome to participate!",
+                    scheduleTitle: "Activity Schedule",
+                    scheduleText: "We hold activities every Wednesday from 3:00 PM to 4:20 PM. All students interested in Chinese culture are welcome to attend.",
+                    membersTitle: "Our Members",
+                    membersText: "Currently, our club has 10 members, a diverse team made up of students from different countries.",
+                    leaderTitle: "Chinese Leader: Chen Ziyang",
+                    leaderDesc: "Chen Ziyang is our Chinese leader, responsible for organizing and leading the club's activities, helping everyone better understand and experience Chinese culture.",
+                    repTitle: "Japanese Representative: Ryuga",
+                    repDesc: "Ryuga is our Japanese representative, responsible for communicating and liaising with Japanese students, helping bridge the cultural differences and connections between China and Japan.",
+                    contactTitle: "Contact Us",
+                    contactText: "If you're interested in our club or have any questions, feel free to contact us at the following email:",
+                    contactEmail: "zc291045@gmail.com"
+                },
+                es: {
+                    header: "Malerven CCA Dirigido por Estudiantes",
+                    aboutLink: "Sobre Nosotros",
+                    scheduleLink: "Horario de Actividades",
+                    membersLink: "Nuestros Miembros",
+                    contactLink: "Contáctenos",
+                    aboutTitle: "Sobre Nosotros",
+                    aboutText: "Somos el primer CCA dirigido por estudiantes en la escuela Malerven. Todos los miércoles de 3:00 PM a 4:20 PM, nos reunimos para organizar y participar en actividades culturales para compartir el encanto de la cultura china.",
+                    aboutDesc: "¡Animamos a todos los estudiantes interesados en la cultura china a unirse a nuestro club, sin importar su nacionalidad! ¡Todos son bienvenidos a participar!",
+                    scheduleTitle: "Horario de Actividades",
+                    scheduleText: "Realizamos actividades todos los miércoles de 3:00 PM a 4:20 PM. Todos los estudiantes interesados en la cultura china son bienvenidos a asistir.",
+                    membersTitle: "Nuestros Miembros",
+                    membersText: "Actualmente, nuestro club tiene 10 miembros, un equipo diverso compuesto por estudiantes de diferentes países.",
+                    leaderTitle: "Líder Chino: Chen Ziyang",
+                    leaderDesc: "Chen Ziyang es nuestro líder chino, responsable de organizar y dirigir las actividades del club, ayudando a todos a entender y experimentar mejor la cultura china.",
+                    repTitle: "Representante Japonés: Ryuga",
+                    repDesc: "Ryuga es nuestro representante japonés, encargado de comunicar y coordinar con los estudiantes japoneses, ayudando a conectar las diferencias culturales entre China y Japón.",
+                    contactTitle: "Contáctenos",
+                    contactText: "Si estás interesado en nuestro club o tienes alguna pregunta, no dudes en contactarnos a través del siguiente correo electrónico:",
+                    contactEmail: "zc291045@gmail.com"
+                }
+            };
+
+            const elementsToTranslate = {
+                "header": "header",
+                "about-link": "aboutLink",
+                "schedule-link": "scheduleLink",
+                "members-link": "membersLink",
+                "contact-link": "contactLink",
+                "about-title": "aboutTitle",
+                "about-text": "aboutText",
+                "about-desc": "aboutDesc",
+                "schedule-title": "scheduleTitle",
+                "schedule-text": "scheduleText",
+                "members-title": "membersTitle",
+                "members-text": "membersText",
+                "leader-title": "leaderTitle",
+                "leader-desc": "leaderDesc",
+                "rep-title": "repTitle",
+                "rep-desc": "repDesc",
+                "contact-title": "contactTitle",
+                "contact-text": "contactText",
+                "contact-email": "contactEmail"
+            };
+
+            for (const [elementId, translationKey] of Object.entries(elementsToTranslate)) {
+                document.getElementById(elementId).innerText = translations[language][translationKey];
+            }
+        }
+    </script>
 </body>
 </html>
